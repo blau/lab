@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="it">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Laboratorio e pagine di test mauta.net</title>
+
+  <!-- Framework CSS -->
+  <link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="blueprint/print.css" type="text/css" media="print">
+  <!--[if IE]><link rel="stylesheet" href="blueprintie.css" type="text/css" media="screen, projection"><![endif]-->
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+<body>
+
+  <div class="container">  
+    <h1>Laboratorio e pagine di test mauta.net</h1>
+    <hr>
+
+	<h2>Ridisegno di Nazione Indiana</h2>
+	<p>Appunti sparsi per il rinnovo di <a href="http:www.nazioneindiana.com">Nazioneindiana.com</a></p>
+
+	<h3>Situazione attuale (novembre 2008)</h3>
+	<p>Il disegno del sito risale al 2005. Ci sono vari problemi in ordine di importanza:</p>
+	<ol>
+		<li><strong>Alto numero di articoli al giorno</strong> - con 3-5 articoli in uscita ogni giorno ed una home page con 20 post, ogni articolo esce dalla home velocemente. </li>
+		<li><strong>Stesso peso per tutti i pezzi</strong>, quelli in esclusiva e quelli ordinari, le  segnalazioni e le note di servizio. Lo strumento sticky/announcement è usato in casi eccezionali e 		gestice solo un articolo alla volta. E' difficile differenziare i contenuti pubblicati per importanza e per argomento.</li>
+		<li><strong>Difficoltà nel fare leggere contenuti fuori dalla home</strong> - una volta uscito		dalla prima pagina il pezzo verrà letto solo se linkato da un post successivo, o se citato da 		altri siti, o se raggiunto don un motore di ricerca.</li>
+		<li><strong>Difficoltà nel prolungare le visite interne</strong> - un nuovo visitatore che proviene da un link o da un motore di ricerca ed arriva su una pagina singola interna (di archivio), non trova facilmente altri contenuti del sito utili a proseguire la lettura di NI, a farsi un'idea dell'offerta eda tornare a leggerci. Parametri: alto bounce rate delle visite all'archivio, alta popolarità della pagina "chi siamo" nelle visite interne (segno che c'è una domanda di approfondimento).</li>
+		<li><strong>Spazio su schermo limitato</strong> il sito è largo 760 pixel, uno spazio stretto per questi contenuti. La maggioranza dei visitatori ha una risoluzione schermo pari o superiore a 1024x768 e potrebbe leggere comodamente una paginata più larga.</li>
+		<li><strong>Peso eccessivo della home page</strong> dovuto principalmente alle immagini pubblicate e aggregate in 20 post</li>
+		<li><strong>Spazio per singolo articolo limitato</strong> ogni post ha a disposizione 450px che per certi contenuti (poesia, grandi immagini...) è limitante e ristretto.</li>
+		<li><strong>altro?</strong></li>
+	</ol>
+    
+    <h3>Priorità</h3>
+    <ul>
+    	<li>Mantenere continuità visiva con l'attuale sito.</li>
+    	<li>Ridurre il tempo di caricamento ed il peso della home</li>
+    	<li>Mantenere l'attuale ritmo di pubblicazione ed eventualmente aumentarlo, non ridurlo.</li>
+    	<li>Altro?</li>
+    </ul>
+    
+	<h3>Soluzioni possibili</h3>
+	<ul>
+		<li><strong>Allargare la pagina</strong> (a 950px o più)</li>
+		<li><strong>2 sidebar</strong>: usare una struttura a 3 colonne (main, sidebar1 sidebar2) dove distribuire più informazioni contestuali e di navigazione</li>
+		<li><strong>navigazione orizzontale</strong>: menu a tenda orizzontale, o sistema a tab/schede (sperimentale in blueprint)</li>
+		<li><strong>box guida ai contenuti</strong> usare una serie di riquadri contenenti i link ai contenuti rilevanti per peso, argomento, affinità. Deve fungere da guida alla navigazione e proposta di contenuti, ad esempio pezzi recenti ma finiti in fondo alla home o già usciti. 
+		Ad esempio, un riquadro con i 5 articoli recenti con criterio redazionale X (es. scritti inediti, originali, esclusivi, di rilievo), un riquadro coi 5 articoli più importanti di NI in assoluto ("se sei capitato qui, leggi almeno questi"), un riquadro con i link ai pezzi di segnalazione eventi, altri riquadri con criterio redazionale Y,Z,Q,W. </li>
+		<li><strong>Creare priorità e formato diversi per tipi di articolo</strong> - modificare l'ordine di apparizione dei pezzi in home in modo da privilegiare alcune categorie (always on top) o applicare a una certa categoria una particolare forma grafica (messa in evidenza, smorzamento)</li>
+		<li><strong>feed differenziati</strong> - creare feed secondari per categorie tematiche (in evidenza, eventi, annotazioni) per chi segue NI dal feed</li>
+		<li>Altro?</li>
+	</ul>
+	
+	<h3>Strumenti</h3>
+	<dl>
+		<dt>piattaforma</dt>
+		<dd><a href="http://wordpress.org">wordpress</a></dd>
+		<dt>tema base</dt>
+		<dd><a href="http://code.google.com/p/sandbox-theme/">sandbox</a></dd>
+		<dt>framework CSS</dt>
+		<dd><a href="htto://sandbox-css.org">Blueprint CSS</a></dd>
+	</dl>
+	
+	<ul>
+	<li>La logica di presentazione madre (template php) è gestita da sandbox theme, il nuovo tema sviluppato è un child theme che usa functions.php e style.css per sovrapporre od estendere funzioni e aspetto base di sandbox</li>
+	<li>Blueprint CSS permette di disporre i contenuti nello spazio della pagina in base a una  <a href="blueprintsrc/grid.css">griglia tipografica</a>, ha inoltre degli <a href="blueprintsrc/typography.css">stili tipografici</a> di base ed è compatibile con IE (si spera vivamente)</li>
+	<li>Blueprint è estensibile e modificabile nella griglia tipografica per variare numero delle colonne (defaul 24), stili di default etc.</li>
+	</ul>
+		
+	<h3>Roadmap</h3>
+	<ol>
+		<li>creare una bozza della suddivisione degli spazi e della disposizione degli elementi. <a href="parts/bozza.html">Fatto</a>.</li>
+		<li>portare un tema nudo sulla bozza.</li>
+		<li>vestire il tema riproducendo gli stili in uso adesso in NI</li>
+		<li>progettare i riquadri-guida al contenuto</li>
+		<li>sperimentare interventi su (custom loop)</li>
+	</ol>
+	
+    <h3>Link e documentazione</h3>
+    <p>The HTML files below tests most HTML elements, and especially classes provided
+      by&nbsp;Blueprint.</p>
+  
+    <table border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th class="span-6">Test page</th>
+        <th class="span-8">Main files tested</th>
+        <th class="span-10">Description</th>
+      </tr>
+      <tr>
+        <td><a href="parts/sample.html">Sample page</a></td>
+				<td>
+					<a href="blueprintsrc/grid.css">grid.css</a>, 
+					<a href="blueprintsrc/typography.css">typography.css</a>
+				</td>
+        <td>A simple sample page, with common elements.</td>
+      </tr>
+      <tr class="even">
+        <td><a href="parts/grid.html">Grid</a></td>
+				<td>
+					<a href="blueprintsrc/grid.css">grid.css</a>
+				</td>
+        <td>Tests classes provided by grid.css.</td>
+      </tr>
+      <tr>
+        <td><a href="parts/elements.html">Typography</a></td>
+				<td>
+					<a href="blueprintsrc/typography.css">typography.css</a>
+				</td>
+        <td>Tests HTML elements which gets set in typography.css.</td>
+      </tr>
+      <tr class="even">
+        <td><a href="parts/forms.html">Forms</a></td>
+				<td>
+					<a href="blueprintsrc/forms.css">forms.css</a>
+				</td>
+        <td>Tests classes and default look provided by forms.css.</td>
+      </tr>
+    </table>
+    
+    <p><em><strong>Nota:</strong></em>
+       bla blab.</p>
+    
+    <div class="box">
+      <p>For more information and help, try these resources:</p>
+      <ul class="bottom">
+        <li><a href="http://code.google.comblueprintcss">The Blueprint home page.</a></li>
+      </ul>
+    </div>
+
+    <p><a href="http://validator.w3.org/check?uri=referer">
+    <img src="parts/valid.png" alt="Valid HTML 4.01 Strict" height="31" width="88" class="top"></a></p>
+    
+  </div>
+</body>
+</html>
